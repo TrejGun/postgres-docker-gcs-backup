@@ -1,5 +1,5 @@
 FROM google/cloud-sdk:alpine
-LABEL maintainer="Jamie <jamie@dynastic.co>"
+LABEL maintainer="TrejGun <trejgun@gmail.com>"
 
 
 # Networking?

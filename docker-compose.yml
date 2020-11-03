@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+
+  dbbackups-image:
+    build:
+      context: .
+      dockerfile: Dockerfile.dbbck
+    image: dbbackups-image
