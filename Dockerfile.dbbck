@@ -1,13 +1,12 @@
+FROM postgres:alpine as postgresalpine
 FROM google/cloud-sdk:alpine
-LABEL maintainer="TrejGun <trejgun@gmail.com>"
-
-
 # Networking?
 RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf
 
 # Install deps
 ADD setup.sh setup.sh
 RUN sh setup.sh && rm setup.sh
+COPY --from=postgresalpine /usr/local/bin/pg_dump /usr/local/bin/pg_dump
 
 # Postgres Environment
 ENV POSTGRES_DATABASE **None**

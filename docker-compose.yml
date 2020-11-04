@@ -6,4 +6,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dbbck
-    image: dbbackups-image
+    image: trejgun/pggcbackups

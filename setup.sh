@@ -4,10 +4,14 @@
 set -e
 
 # Update
+echo http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
+echo http://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
+echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 apk update
 
-# Install pg_dump
-apk add --no-cache postgresql-client=13
+# Install pg_dump 13
+
+apk add --no-cache postgresql-client
 
 # Install go-chron
 apk add curl
